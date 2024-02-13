@@ -1,0 +1,132 @@
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --white: hsla(0, 0%, 100%, 0.75);
+    --light-grey: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grey);
+}
+
+.container {
+    max-width: 1440px;
+    display: flex;
+    height: 700px;
+    border-radius: 20px;
+    
+    & .card {
+	padding: 4rem;
+	flex: 1 1 ;
+	
+	& img {
+	    padding-bottom: 3rem;
+	}
+	
+	& h2 {
+	    font-size: 3rem;
+	    font-family: "Big Shoulders Display";
+	    color: var(--light-grey);
+	    margin-bottom: 3rem;
+	}
+
+	& p {
+	    font-size: 1.5rem;
+	    font-family: "Lexend Deca";
+	    color: var(--white);
+	    word-spacing: 0.4rem;
+	    margin-bottom: 8rem;
+	}
+
+	& a {
+	    background-color: var(--light-grey);
+	    font-size: 1.5rem;
+	    font-family: "Lexend Deca";
+	    padding: 1.5rem 3rem;
+	    border-radius: 50px;
+	    text-decoration: none;
+	}
+
+	& a#btn-one {
+	    color: var(--orange);
+	}
+
+	& a#btn-one:hover {
+	    background-color: transparent;
+	    color: var(--light-grey);
+	    border: 3px solid var(--light-grey);
+	}
+	
+	& a#btn-two {
+	    color: var(--cyan);
+	}
+
+	& a#btn-two:hover {
+	    background-color: transparent;
+	    color: var(--light-grey);
+	    border: 3px solid var(--light-grey);
+	}
+	
+	& a#btn-three {
+	    color: var(--dark-cyan);
+	}
+
+	& a#btn-three:hover {
+	    background-color: transparent;
+	    color: var(--light-grey);
+	    border: 3px solid var(--light-grey);
+	}
+	
+    }
+    
+    & #card-one {
+	background-color: var(--orange);
+	border-radius: 10px 0 0 10px;
+    }
+
+    & #card-two {
+	background-color: var(--cyan);
+    }
+
+    & #card-three {
+	background-color: var(--dark-cyan);
+	border-radius: 0 10px 10px 0;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .container {
+	margin: 3rem;
+    }
+}
+
+@media only screen and (max-width: 1170px) {
+    body {
+	height: 100%;
+    }
+    .container {
+	display: block;
+	text-align: center;
+	height: 90%;
+	margin-bottom: 3rem;
+
+	& #card-one {
+	    border-radius: 10px 10px 0 0;
+	}
+
+	& #card-three {
+	    border-radius: 0 0 10px 10px;
+	}
+    }
+}
